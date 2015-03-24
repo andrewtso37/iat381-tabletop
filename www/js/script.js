@@ -18,3 +18,15 @@ function rolldice(){
 var randomdice=Math.round(Math.random()*5)
 document.images["dice"].src=eval("face"+randomdice+".src")
 }
+
+// hammer js pinch
+var clearElement = document.getElementById('clearElement');
+
+var mc2 = new Hammer(clearElement);
+
+mc2.get('pinch').set({ enable: true });
+
+// listen for events...
+mc2.on('pinch', function(e) {
+	rolldice();
+});
