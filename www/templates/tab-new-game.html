@@ -1,3 +1,32 @@
 <ion-view view-title="New Game">
-  
+<ion-content>
+<div class="list">
+  <div class="item item-divider">
+  Player Amount
+  <div class="range range-positive">
+		<input type="range" name="players" min="1" max="6" ng-model="data.players" id='players'>
+  </div>
+  <p>Players : {{data.players}}</p>
+  </div>
+  <div class="item item-divider">
+  Initial Life
+  <div class="range range-positive">
+		<input type="range" name="life" min="1" max="100" ng-model="data.life" id='life'>
+  </div>
+  <p>Life : {{data.life}}</p>
+  </div>
+  <div class="item item-divider">
+  Initial Token
+  <div class="range range-positive">
+		<input type="range" name="token" min="0" max="50" ng-model="data.token" id='token'>
+  </div>
+  <p>Tokens : {{data.token}}</p>
+  </div>
+</div>
+<div align=center>
+    <a class="button button-large button-positive" href='#/tab/tracker' onclick='start()' id="gameStart" ng-click="hide()">
+      Game Start
+    </a>
+</div>
+</ion-content>
 </ion-view>
