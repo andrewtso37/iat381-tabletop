@@ -67,6 +67,23 @@ function hide() {
 	 document.getElementById('p5').style.display = "block";
 	 document.getElementById('p6').style.display = "block";
 	}
+
+	var dice = document.getElementById('dice').value;
+	if (dice == 1) {
+	 document.getElementById('d1').style.display = "block";
+	 document.getElementById('d2').style.display = "none";
+	 document.getElementById('d3').style.display = "none";
+	}
+	if (dice == 2) {
+	 document.getElementById('d1').style.display = "block";
+	 document.getElementById('d2').style.display = "block";
+	 document.getElementById('d3').style.display = "none";
+	}
+	if (dice == 3) {
+	 document.getElementById('d1').style.display = "block";
+	 document.getElementById('d2').style.display = "block";
+	 document.getElementById('d3').style.display = "block";
+	}
 }
 
 // calculation functions

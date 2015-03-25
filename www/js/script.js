@@ -13,8 +13,20 @@ face4.src="../img/roll5.svg"
 var face5=new Image()
 face5.src="../img/roll6.svg"
 
-function rolldice(){
+function rolldice1(){
 //create a random integer between 0 and 5
 var randomdice=Math.round(Math.random()*5)
-document.images["dice"].src=eval("face"+randomdice+".src")
+document.images["dice1"].src=eval("face"+randomdice+".src")
+}
+
+function rolldice2(){
+//create a random integer between 0 and 5
+var randomdice=Math.round(Math.random()*5)
+document.images["dice2"].src=eval("face"+randomdice+".src")
+}
+
+function rolldice3(){
+//create a random integer between 0 and 5
+var randomdice=Math.round(Math.random()*5)
+document.images["dice3"].src=eval("face"+randomdice+".src")
 }
