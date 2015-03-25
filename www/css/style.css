@@ -1,1 +1,96 @@
-/* Empty. Add your own CSS if you like */
+input, button{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#counterButton {
+}
+
+#tokenButton {
+}
+
+#p1 {
+	background-color: #92BAFF; 
+}
+
+#p2 {
+	background-color: #A5E9E5;
+}
+
+#p3 {
+	background-color: #7FE889; 
+}
+
+#p4 {
+	background-color: #F3F8A3; 
+}
+
+#p5 {
+	background-color: #FFA786; 
+}
+
+#p6 {
+	background-color: #E1A1E2; 
+}
+
+.grid{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.input-display{
+	width: 25% !important;
+	height: 40px !important;
+	font: 30px Arial, sans-serif !important;
+	text-align: center;
+	color: #FFFFFF !important;
+	background-color: #000000;
+	border-color: transparent;
+}
+
+.counter-display{
+	width: 50px !important;
+	height: 50px !important;
+	margin-right: 15px;
+	font: 25px Arial, sans-serif !important;
+	text-align: center;
+	color: #FFFFFF !important;
+	background-color: #FFA62F;
+	border-radius: 25px;
+}
+
+.button1{
+	width: 35px;
+	height: 40px;
+	font: 20px Arial, sans-serif;
+	color: #000000;
+}
+
+.button2{
+	width: 25px;
+	height: 25px;
+	font: 18px Arial, sans-serif;
+	color: #000000;
+	border-radius: 25px;
+}
+.button3{
+	width: 30px;
+	height: 30px;
+	font: 10px Arial, sans-serif;
+	font-weight: 900;
+	color: #000000;
+	border-width: 0px;
+	border-radius: 15px;
+}
+
+.button4{
+	width: 30px;
+	height: 30px;
+	font: 10px Arial, sans-serif;
+	font-weight: 900;
+	background-color: #F3FF00;
+	border-width: 0px;
+	border-radius: 15px;
+}
