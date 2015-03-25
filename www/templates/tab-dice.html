@@ -1,5 +1,20 @@
 <ion-view view-title="Dice">
-  <ion-content class="padding">
-  <p class="dice-position"><img src="../img/roll1.svg" name="dice" onClick="rolldice()"></p>
+  <ion-content>
+  <div class="row">
+  <div class="col col-33">
+  <p class="dice-position"><img src="/img/roll1.svg" name="dice1"></p>
+  </div>
+  <div class="col col-33">
+  <p class="dice-position"><img src="/img/roll1.svg" name="dice2"></p>
+  </div>
+  <div class="col col-33">
+  <p class="dice-position"><img src="/img/roll1.svg" name="dice3"></p>
+  </div>
+  </div>
+  <div align=center>
+    <a class="button button-full button-positive" id='roll' onclick='rolldice1(); rolldice2(); rolldice3();'>
+      Roll Dice
+    </a>
+</div>
   </ion-content>
 </ion-view>
