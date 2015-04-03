@@ -1,5 +1,11 @@
 // initializing function
 function start() {
+	 document.getElementById('player1').style.display = "block";
+	 document.getElementById('player2').style.display = "block";
+	 document.getElementById('player3').style.display = "block";
+	 document.getElementById('player4').style.display = "block";
+	 document.getElementById('player5').style.display = "block";
+	 document.getElementById('player6').style.display = "block";
 	var life = document.getElementById('life').value;
 	var token = document.getElementById('token').value;
 	 document.getElementById('1').value = life;
@@ -20,54 +26,56 @@ function start() {
 function hide() {
 	var players = document.getElementById('players').value;
 	if (players == 1) {
-	 document.getElementById('p1').style.display = "block";
-	 document.getElementById('p2').style.display = "none";
-	 document.getElementById('p3').style.display = "none";
-	 document.getElementById('p4').style.display = "none";
-	 document.getElementById('p5').style.display = "none";
-	 document.getElementById('p6').style.display = "none";
+	 document.getElementById('player1').style.display = "block";
+	 document.getElementById('player2').style.display = "none";
+	 document.getElementById('player3').style.display = "none";
+	 document.getElementById('player4').style.display = "none";
+	 document.getElementById('player5').style.display = "none";
+	 document.getElementById('player6').style.display = "none";
 	}
 	if (players == 2) {
-	 document.getElementById('p1').style.display = "block";
-	 document.getElementById('p2').style.display = "block";
-	 document.getElementById('p3').style.display = "none";
-	 document.getElementById('p4').style.display = "none";
-	 document.getElementById('p5').style.display = "none";
-	 document.getElementById('p6').style.display = "none";
+	 document.getElementById('player1').style.display = "block";
+	 document.getElementById('player2').style.display = "block";
+	 document.getElementById('player3').style.display = "none";
+	 document.getElementById('player4').style.display = "none";
+	 document.getElementById('player5').style.display = "none";
+	 document.getElementById('player6').style.display = "none";
 	}
 	if (players == 3) {
-	 document.getElementById('p1').style.display = "block";
-	 document.getElementById('p2').style.display = "block";
-	 document.getElementById('p3').style.display = "block";
-	 document.getElementById('p4').style.display = "none";
-	 document.getElementById('p5').style.display = "none";
-	 document.getElementById('p6').style.display = "none";
+	 document.getElementById('player1').style.display = "block";
+	 document.getElementById('player2').style.display = "block";
+	 document.getElementById('player3').style.display = "block";
+	 document.getElementById('player4').style.display = "none";
+	 document.getElementById('player5').style.display = "none";
+	 document.getElementById('player6').style.display = "none";
 	}
 	if (players == 4) {
-	 document.getElementById('p1').style.display = "block";
-	 document.getElementById('p2').style.display = "block";
-	 document.getElementById('p3').style.display = "block";
-	 document.getElementById('p4').style.display = "block";
-	 document.getElementById('p5').style.display = "none";
-	 document.getElementById('p6').style.display = "none";
+	 document.getElementById('player1').style.display = "block";
+	 document.getElementById('player2').style.display = "block";
+	 document.getElementById('player3').style.display = "block";
+	 document.getElementById('player4').style.display = "block";
+	 document.getElementById('player5').style.display = "none";
+	 document.getElementById('player6').style.display = "none";
 	}
 	if (players == 5) {
-	 document.getElementById('p1').style.display = "block";
-	 document.getElementById('p2').style.display = "block";
-	 document.getElementById('p3').style.display = "block";
-	 document.getElementById('p4').style.display = "block";
-	 document.getElementById('p5').style.display = "block";
-	 document.getElementById('p6').style.display = "none";
+	 document.getElementById('player1').style.display = "block";
+	 document.getElementById('player2').style.display = "block";
+	 document.getElementById('player3').style.display = "block";
+	 document.getElementById('player4').style.display = "block";
+	 document.getElementById('player5').style.display = "block";
+	 document.getElementById('player6').style.display = "none";
 	}
 	if (players == 6) {
-	 document.getElementById('p1').style.display = "block";
-	 document.getElementById('p2').style.display = "block";
-	 document.getElementById('p3').style.display = "block";
-	 document.getElementById('p4').style.display = "block";
-	 document.getElementById('p5').style.display = "block";
-	 document.getElementById('p6').style.display = "block";
+	 document.getElementById('player1').style.display = "block";
+	 document.getElementById('player2').style.display = "block";
+	 document.getElementById('player3').style.display = "block";
+	 document.getElementById('player4').style.display = "block";
+	 document.getElementById('player5').style.display = "block";
+	 document.getElementById('player6').style.display = "block";
 	}
 }
+
+function remove(player) { player.style.display = "none"}
 
 // calculation functions
 function s(v, player) { document.getElementById(player).value = v }
