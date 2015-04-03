@@ -1,36 +1,37 @@
+/* tracker tab */
 input, button{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-#counterButton {
+#counterButton{
 }
 
-#tokenButton {
+#tokenButton{
 }
 
-#p1 {
+#p1{
 	background-color: #92BAFF; 
 }
 
-#p2 {
+#p2{
 	background-color: #A5E9E5;
 }
 
-#p3 {
+#p3{
 	background-color: #7FE889; 
 }
 
-#p4 {
+#p4{
 	background-color: #F3F8A3; 
 }
 
-#p5 {
+#p5{
 	background-color: #FFA786; 
 }
 
-#p6 {
+#p6{
 	background-color: #E1A1E2; 
 }
 
@@ -75,6 +76,7 @@ input, button{
 	color: #000000;
 	border-radius: 25px;
 }
+
 .button3{
 	width: 30px;
 	height: 30px;
@@ -93,4 +95,11 @@ input, button{
 	background-color: #F3FF00;
 	border-width: 0px;
 	border-radius: 15px;
+}
+
+
+/* dice tab*/
+.dice-position{
+	text-align: center;
+	padding-top: 25px;
 }
