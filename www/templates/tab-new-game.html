@@ -2,6 +2,11 @@
 <ion-content>
 <div class="list">
   <div class="item">
+    <div class="input label">Name of Game</div>
+    <input type="text">
+  </div>
+
+  <div class="item">
   Player Amount
   <div class="range range-positive">
 		<input type="range" name="players" min="1" max="6" ng-model="data.players" id='players'>
@@ -35,5 +40,12 @@
       Start Game
     </a>
 </div>
+
+<div align=center>
+    <a class="button button-full button-assertive">
+      Add to Favourites
+    </a>
+</div>
+
 </ion-content>
 </ion-view>
