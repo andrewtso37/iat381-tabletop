@@ -2,6 +2,10 @@
 <ion-content has-bouncing="false">
 <div class="list">
   <div class="item">
+    <div class="input label">Name of Game<input type="text"></div>
+  </div>
+
+  <div class="item">
   Player Amount
   <div class="range range-positive">
 		<input type="range" name="players" min="1" max="6" ng-model="data.players" id='players'>
@@ -29,10 +33,17 @@
   </div>
   <p>Dice : {{data.dice}}</p>
   </div>
+<<<<<<< HEAD
 <div align=center>
     <a class="button button-full button-positive" href='#/tab/tracker' onclick='start(); startDice()' id="gameStart">
+=======
+</div>-->
+<div>
+    <a class="button button-full button-positive" href='#/tab/tracker' onclick='start()' id="gameStart" ng-click="hide()">
+>>>>>>> 68d5a3da4c9e3b6f31d1a9fb3d25c0a58a30bfb4
       Start Game
     </a>
 </div>
+
 </ion-content>
 </ion-view>
