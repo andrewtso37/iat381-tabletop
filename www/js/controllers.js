@@ -20,11 +20,6 @@ angular.module('starter.controllers', [])
 	window.onload = startDice();
 	window.onload = shakeDice.start();
 	window.addEventListener('shake', shakeEventDidOccur, false);
-	//function to call when shake occurs
-	function shakeEventDidOccur () {
-		rollAll();
-		console.log('rolled');
-	}
 })
 
 .directive('detectGestures', function($ionicGesture) {
