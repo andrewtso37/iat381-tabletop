@@ -24,6 +24,54 @@ function start() {
 	 hide();
 }
 
+function startDice() {
+	var dice = document.getElementById('dice').value;
+	if (dice == 6) {
+	 document.getElementById('dice1').style.display = "block";
+	 document.getElementById('dice2').style.display = "block";
+	 document.getElementById('dice3').style.display = "block";
+	 document.getElementById('dice4').style.display = "block";
+	 document.getElementById('dice5').style.display = "block";
+	 document.getElementById('dice6').style.display = "block";
+	}
+	if (dice == 5) {
+	 document.getElementById('dice1').style.display = "block";
+	 document.getElementById('dice2').style.display = "block";
+	 document.getElementById('dice3').style.display = "block";
+	 document.getElementById('dice4').style.display = "block";
+	 document.getElementById('dice5').style.display = "block";
+	 document.getElementById('dice6').style.display = "none";
+	}
+	if (dice == 4) {
+	 document.getElementById('dice5').style.display = "none";
+	 document.getElementById('dice6').style.display = "none";	
+	}
+	if (dice == 3) {
+	 document.getElementById('dice1').style.display = "block";
+	 document.getElementById('dice2').style.display = "block";
+	 document.getElementById('dice3').style.display = "block";
+	 document.getElementById('dice4').style.display = "none";
+	 document.getElementById('dice5').style.display = "none";
+	 document.getElementById('dice6').style.display = "none";	
+	}
+	if (dice == 2) {
+	 document.getElementById('dice1').style.display = "block";
+	 document.getElementById('dice2').style.display = "block";
+	 document.getElementById('dice3').style.display = "none";
+	 document.getElementById('dice4').style.display = "none";
+	 document.getElementById('dice5').style.display = "none";
+	 document.getElementById('dice6').style.display = "none";	
+	}
+	if (dice == 1) {
+	 document.getElementById('dice1').style.display = "block";
+	 document.getElementById('dice2').style.display = "none";
+	 document.getElementById('dice3').style.display = "none";
+	 document.getElementById('dice4').style.display = "none";
+	 document.getElementById('dice5').style.display = "none";
+	 document.getElementById('dice6').style.display = "none";	
+	}
+}
+
 // calculation functions
 function s(v, player) { document.getElementById(player).value = v }
 function a(v, player) { s(eval(document.getElementById(player).value += v), player) }
@@ -98,10 +146,14 @@ function displayChange(player) {
 	playerButtonAnimation(player);
 	var player = document.getElementById(player);
 	if (player.style.display == "none") {
-		player.style.display = "block";
+		playerTabRevealAnimation(player);
+		setTimeout(function() {
+		player.style.display = "block";}, 500);
 	}
 	else{
-		player.style.display = "none";
+		playerTabRemoveAnimation(player);
+		setTimeout(function() {
+		player.style.display = "none";}, 500);
 	}
 }
 
@@ -131,6 +183,14 @@ function rollAll() {
 	rolldice5();
 	rolldice6();
 	}, 700);
+	setTimeout(function() {
+	$('#dice1').removeClass('vertFlipAnimation');
+	$('#dice2').removeClass('vertFlipAnimation');
+	$('#dice3').removeClass('vertFlipAnimation');
+	$('#dice4').removeClass('vertFlipAnimation');
+	$('#dice5').removeClass('vertFlipAnimation');
+	$('#dice6').removeClass('vertFlipAnimation');
+	}, 1000);
 }
 
 //roll dice 1
@@ -190,7 +250,7 @@ function addDice(){
 		document.getElementById('dice3').style.display = "block";	
 	}	
 	if (document.getElementById('dice1').style.display == "block" && document.getElementById('dice2').style.display == "none") {
-		document.getElementById('dice2').style.display = "block";	
+		document.getElementById('dice2').style.display = "block";
 	}	
 }
 
@@ -253,15 +313,40 @@ function buttonAnimation(button){
 	var button = button;
 	button.style.webkitAnimation = 'none';
 	setTimeout(function() {button.style.webkitAnimation = '';}, 10);	
+	setTimeout(function() {$(button).removeClass('buttonAnimation')}, 500);
 }
 
-function playerTabAnimation(player){
-	$(player).addClass('playerTabAnimation');
+function playerTabAnimationLeft(player){
+	$(player).addClass('playerTabAnimationLeft');
 	var player = player;
 	player.style.webkitAnimation = 'none';
 	setTimeout(function() {player.style.webkitAnimation = '';}, 10);	
+	setTimeout(function() {$(player).removeClass('playerTabAnimationLeft');}, 1000);
 }
 
+function playerTabAnimationRight(player){
+	$(player).addClass('playerTabAnimationRight');
+	var player = player;
+	player.style.webkitAnimation = 'none';
+	setTimeout(function() {player.style.webkitAnimation = '';}, 10);	
+	setTimeout(function() {$(player).removeClass('playerTabAnimationRight');}, 1000);
+}
+
+function playerTabRemoveAnimation(player){
+	$(player).addClass('playerTabRemoveAnimation');
+	var player = player;
+	player.style.webkitAnimation = 'none';
+	setTimeout(function() {player.style.webkitAnimation = '';}, 10);	
+	setTimeout(function() {$(player).removeClass('playerTabRemoveAnimation');}, 1000);
+}
+
+function playerTabRevealAnimation(player){
+	$(player).addClass('playerTabRevealAnimation');
+	var player = player;
+	player.style.webkitAnimation = 'none';
+	setTimeout(function() {player.style.webkitAnimation = '';}, 10);	
+	setTimeout(function() {$(player).removeClass('playerTabRevealAnimation');}, 1000);
+}
 
 function diceAnimation(){
 	$('#dice1').addClass('vertFlipAnimation');

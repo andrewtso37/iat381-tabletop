@@ -119,7 +119,7 @@ input, button{
 	font: 30px Arial, sans-serif !important;
 	text-align: center;
 	color: #FFFFFF !important;
-	background-color: #000000;
+	background-color: #000000 !important;
 	border-color: transparent;
 }
 
@@ -129,9 +129,11 @@ input, button{
 	margin-right: 15px;
 	font: 25px Arial, sans-serif !important;
 	text-align: center;
-	color: #FFFFFF !important;
-	background-color: #FFA62F;
+	color: #000000 !important;
+	background-color: #F1E130 !important;
+	border-width: 5px;
 	border-radius: 25px;
+	border-color: #FFA62F !important;
 }
 
 .button1{
@@ -186,7 +188,6 @@ input, button{
 #diceSettings{
 	padding-right: 5%;
 }
-
 
 /*animations*/
 .vertFlipAnimation{
@@ -307,41 +308,158 @@ input, button{
 }
 
 
-.playerTabAnimation{
-	animation-name: playerTabAnimation;
-	-webkit-animation-name: playerTabAnimation;	
+.playerTabAnimationLeft{
+	animation-name: playerTabAnimationLeft;
+	-webkit-animation-name: playerTabAnimationLeft;	
 
-	animation-duration: 1s;	
-	-webkit-animation-duration: 1s;
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
 
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;
 }
 
-@keyframes playerTabAnimation {
-	0%{opacity: 0.9;}
-	10%{opacity: 0.7;}
-	20%{opacity: 0.5;}	
-	30%{opacity: 0.3;}
-	40%{opacity: 0.1;}
-	50%{opacity: 0.0;}
-	60%{opacity: 0.1;}
-	70%{opacity: 0.3;}
-	80%{opacity: 0.5;}
-	90%{opacity: 0.7;}
-	100%{opacity: 0.9;}	
+@keyframes playerTabAnimationLeft {
+	0%{transform: translateX(0%);}
+	10%{transform: translateX(-10%);}
+	20%{transform: translateX(-20%);}	
+	30%{transform: translateX(-30%);}
+	40%{transform: translateX(-40%);}
+	50%{transform: translateX(-50%);}
+	60%{transform: translateX(-60%);}
+	70%{transform: translateX(-70%);}
+	80%{transform: translateX(-80%);}
+	90%{transform: translateX(-90%);}
+	100%{transform: translateX(-100%);}	
 }
 
-@-webkit-keyframes playerTabAnimation {
-	0%{opacity: 0.9;}
-	10%{opacity: 0.7;}
-	20%{opacity: 0.5;}	
-	30%{opacity: 0.3;}
-	40%{opacity: 0.1;}
-	50%{opacity: 0.0;}
-	60%{opacity: 0.1;}
+@-webkit-keyframes playerTabAnimationLeft {
+	0%{-webkit-transform: translateX(0%);}
+	10%{-webkit-transform: translateX(-10%);}
+	20%{-webkit-transform: translateX(-20%);}	
+	30%{-webkit-transform: translateX(-30%);}
+	40%{-webkit-transform: translateX(-40%);}
+	50%{-webkit-transform: translateX(-50%);}
+	60%{-webkit-transform: translateX(-60%);}
+	70%{-webkit-transform: translateX(-70%);}
+	80%{-webkit-transform: translateX(-80%);}
+	90%{-webkit-transform: translateX(-90%);}
+	100%{-webkit-transform: translateX(-100%);}	
+}
+
+.playerTabAnimationRight{
+	animation-name: playerTabAnimationRight;
+	-webkit-animation-name: playerTabAnimationRight;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerTabAnimationRight {
+	0%{transform: translateX(0%);}
+	10%{transform: translateX(10%);}
+	20%{transform: translateX(20%);}	
+	30%{transform: translateX(30%);}
+	40%{transform: translateX(40%);}
+	50%{transform: translateX(50%);}
+	60%{transform: translateX(60%);}
+	70%{transform: translateX(70%);}
+	80%{transform: translateX(80%);}
+	90%{transform: translateX(90%);}
+	100%{transform: translateX(100%);}	
+}
+
+@-webkit-keyframes playerTabAnimationRight {
+	0%{-webkit-transform: translateX(0%);}
+	10%{-webkit-transform: translateX(10%);}
+	20%{-webkit-transform: translateX(20%);}	
+	30%{-webkit-transform: translateX(30%);}
+	40%{-webkit-transform: translateX(40%);}
+	50%{-webkit-transform: translateX(50%);}
+	60%{-webkit-transform: translateX(60%);}
+	70%{-webkit-transform: translateX(70%);}
+	80%{-webkit-transform: translateX(80%);}
+	90%{-webkit-transform: translateX(90%);}
+	100%{-webkit-transform: translateX(100%);}	
+}
+
+.playerTabRemoveAnimation{
+	animation-name: playerTabRemoveAnimation;
+	-webkit-animation-name: playerTabRemoveAnimation;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerTabRemoveAnimation {
+	0%{opacity: 1.0;}
+	10%{opacity: 0.9;}
+	20%{opacity: 0.8;}	
+	30%{opacity: 0.7;}
+	40%{opacity: 0.6;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.4;}
 	70%{opacity: 0.3;}
-	80%{opacity: 0.5;}
-	90%{opacity: 0.7;}
-	100%{opacity: 0.9;}	
+	80%{opacity: 0.2;}
+	90%{opacity: 0.1;}
+	100%{opacity: 0.0;}	
+}
+
+@-webkit-keyframes playerTabRemoveAnimation {
+	0%{opacity: 1.0;}
+	10%{opacity: 0.9;}
+	20%{opacity: 0.8;}	
+	30%{opacity: 0.7;}
+	40%{opacity: 0.6;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.4;}
+	70%{opacity: 0.3;}
+	80%{opacity: 0.2;}
+	90%{opacity: 0.1;}
+	100%{opacity: 0.0;}	
+}
+
+.playerTabRevealAnimation{
+	animation-name: playerTabRevealAnimation;
+	-webkit-animation-name: playerTabRevealAnimation;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerTabRevealAnimation {
+	0%{opacity: 0.0;}
+	10%{opacity: 0.1;}
+	20%{opacity: 0.2;}	
+	30%{opacity: 0.3;}
+	40%{opacity: 0.4;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.6;}
+	70%{opacity: 0.7;}
+	80%{opacity: 0.8;}
+	90%{opacity: 0.9;}
+	100%{opacity: 1.0;}	
+}
+
+@-webkit-keyframes playerTabRevealAnimation {
+	0%{opacity: 0.0;}
+	10%{opacity: 0.1;}
+	20%{opacity: 0.2;}	
+	30%{opacity: 0.3;}
+	40%{opacity: 0.4;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.6;}
+	70%{opacity: 0.7;}
+	80%{opacity: 0.8;}
+	90%{opacity: 0.9;}
+	100%{opacity: 1.0;}	
 }

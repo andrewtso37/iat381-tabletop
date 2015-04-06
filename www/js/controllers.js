@@ -1,14 +1,15 @@
 angular.module('starter.controllers', [])
 
 .controller('NewGameCtrl', function($scope) {
-	$scope.data = { 'players': '1', 'life' : '20', 'token': '0' };
+	$scope.data = { 'players': '1', 'life' : '20', 'token': '0', 'dice': '2' };
 })
 
 .controller('TrackerCtrl', function($scope) {  
 	window.onload = start();
-	$scope.reportEvent = function(event)  {
+	$scope.removeTab = function(event)  {
 		console.log('Reporting : ' + event.type);
-		playerTabAnimation(this);
+		if (event.type == 'swipeleft') {playerTabAnimationLeft(this);}
+		if (event.type == 'swiperight') {playerTabAnimationRight(this);}
 		remove(this);
 	}
 })
@@ -16,6 +17,7 @@ angular.module('starter.controllers', [])
 .controller('TimerCtrl', function($scope) {})
 
 .controller('DiceCtrl', function($scope) {
+	window.onload = startDice();
 	$scope.rollDice = function(event)  {
 		console.log('Reporting : ' + event.type);
 		rollAll();
@@ -30,10 +32,10 @@ angular.module('starter.controllers', [])
       var gestureType = attrs.gestureType;
       switch(gestureType) {
 		case 'swipePlayer':
-          $ionicGesture.on('swipeleft swiperight', scope.reportEvent, elem);
+          $ionicGesture.on('swipeleft swiperight', scope.removeTab, elem);
           break;
 		case 'gestureDice':
-		  $ionicGesture.on('swipe', scope.rollDice, elem);
+		  $ionicGesture.on('shake', scope.rollDice, elem);
 		  break;
       }
     }
