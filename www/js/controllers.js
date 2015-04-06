@@ -18,8 +18,10 @@ angular.module('starter.controllers', [])
 
 .controller('DiceCtrl', function($scope) {
 	window.onload = startDice();
-	$scope.rollDice = function(event)  {
-		console.log('Reporting : ' + event.type);
+	window.onload = shakeDice.start();
+	window.addEventListener('shake', shakeEventDidOccur, false);
+	//function to call when shake occurs
+	function shakeEventDidOccur () {
 		rollAll();
 		console.log('rolled');
 	}

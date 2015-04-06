@@ -43,6 +43,10 @@ function startDice() {
 	 document.getElementById('dice6').style.display = "none";
 	}
 	if (dice == 4) {
+	 document.getElementById('dice1').style.display = "block";
+	 document.getElementById('dice2').style.display = "block";
+	 document.getElementById('dice3').style.display = "block";
+	 document.getElementById('dice4').style.display = "block";
 	 document.getElementById('dice5').style.display = "none";
 	 document.getElementById('dice6').style.display = "none";	
 	}
