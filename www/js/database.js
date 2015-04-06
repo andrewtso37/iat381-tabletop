@@ -104,18 +104,18 @@ var html5rocks = {};
 
     function renderTodo(row) {
       var todos = document.getElementById("todoItems");
-      var li = document.createElement("li");
-      var a = document.createElement("a");
+      var li = document.createElement("div");
+      //var a = document.createElement("a");
       var t = document.createTextNode(row.text);
 
-      a.addEventListener("click", function() {
+      li.addEventListener("click", function() {
         html5rocks.indexedDB.deleteTodo(row.timeStamp);
       }, false);
 
-      a.href = "#";
-      a.textContent = " [Delete]";
+      li.href = "#";
+      //a.textContent = " [Delete]";
       li.appendChild(t);
-      li.appendChild(a);
+      //li.appendChild(a);
       todos.appendChild(li);
     }
 
