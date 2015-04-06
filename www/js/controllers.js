@@ -16,7 +16,6 @@ angular.module('starter.controllers', [])
 
 .controller('FavouritesCtrl', function($scope) {})
 
-<<<<<<< HEAD
 .controller('DiceCtrl', function($scope) {
 	window.onload = startDice();
 	$scope.rollDice = function(event)  {
@@ -42,8 +41,6 @@ angular.module('starter.controllers', [])
     }
   }
 })
-=======
 .controller('DiceCtrl', function($scope) {})
 
 .controller('AddCtrl', function($scope) {})
->>>>>>> 68d5a3da4c9e3b6f31d1a9fb3d25c0a58a30bfb4
