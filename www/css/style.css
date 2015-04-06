@@ -11,28 +11,100 @@ input, button{
 #tokenButton{
 }
 
-#p1{
-	background-color: #92BAFF; 
+#playerDisplay{
+    position: fixed;
+	height: 30px;
+	margin-top: 50px;
+	padding-right: 5%;
+	width: 100%;
 }
 
-#p2{
+#space{
+    height: 50px;
+}
+
+#player1{
+	background: linear-gradient(#FFFFFF, #92BAFF); 
+}
+
+.playerButton1{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #92BAFF;
+	border-style: none;
+}
+
+#player2{
+	background: linear-gradient(#FFFFFF, #A5E9E5);
+}
+
+.playerButton2{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
 	background-color: #A5E9E5;
+	border-style: none;
 }
 
-#p3{
-	background-color: #7FE889; 
+#player3{
+	background: linear-gradient(#FFFFFF, #7FE889);
 }
 
-#p4{
-	background-color: #F3F8A3; 
+.playerButton3{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #7FE889;
+	border-style: none;
 }
 
-#p5{
-	background-color: #FFA786; 
+#player4{
+	background: linear-gradient(#FFFFFF, #F3F8A3);
 }
 
-#p6{
-	background-color: #E1A1E2; 
+.playerButton4{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #F3F8A3;
+	border-style: none;
+}
+
+#player5{
+	background: linear-gradient(#FFFFFF, #FFA786);
+}
+
+.playerButton5{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #FFA786;
+	border-style: none;
+}
+
+#player6{
+	background: linear-gradient(#FFFFFF, #E1A1E2);
+}
+
+.playerButton6{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #E1A1E2;
+	border-style: none;
 }
 
 .grid{
@@ -97,9 +169,179 @@ input, button{
 	border-radius: 15px;
 }
 
-
 /* dice tab*/
-.dice-position{
-	text-align: center;
-	padding-top: 25px;
+.diceLeft{
+	height: 100px;
+	padding-left: 20%;
+	padding-bottom: 20px;
+}
+
+.diceRight{
+	height: 100px;
+	padding-right: 20%;
+	padding-bottom: 20px;
+	margin-left: auto !important;
+}
+
+#diceSettings{
+	padding-right: 5%;
+}
+
+
+/*animations*/
+.vertFlipAnimation{
+	animation-name: vertFlipAnimation;
+	-webkit-animation-name: vertFlipAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes vertFlipAnimation {
+	0% 	{transform: scaleY(0.9);}
+	10% {transform: scaleY(0.7);}
+	20% {transform: scaleY(0.5);}
+	30% {transform: scaleY(0.3);}
+	40% {transform: scaleY(0.1);}
+	50% {transform: scaleY(0.0);}
+	60% {transform: scaleY(0.1);}
+	70% {transform: scaleY(0.3);}
+	80% {transform: scaleY(0.5);}
+	90% {transform: scaleY(0.7);}
+	100% {transform: scaleY(0.9);}
+}
+
+@-webkit-keyframes vertFlipAnimation {
+	0% 	{transform: scaleY(0.9);}
+	10% {transform: scaleY(0.7);}
+	20% {transform: scaleY(0.5);}
+	30% {transform: scaleY(0.3);}
+	40% {transform: scaleY(0.1);}
+	50% {transform: scaleY(0.0);}
+	60% {transform: scaleY(0.1);}
+	70% {transform: scaleY(0.3);}
+	80% {transform: scaleY(0.5);}
+	90% {transform: scaleY(0.7);}
+	100% {transform: scaleY(0.9);}
+}
+
+.playerButtonAnimation{
+	animation-name: playerButtonAnimation;
+	-webkit-animation-name: playerButtonAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerButtonAnimation {
+	0%{opacity: 0.6;}
+	10%{opacity: 0.4;}
+	20%{opacity: 0.2;}	
+	30%{opacity: 0.0;}
+	40%{opacity: 0.2;}
+	50%{opacity: 0.3;}
+	60%{opacity: 0.5;}
+	70%{opacity: 0.6;}
+	80%{opacity: 0.7;}
+	90%{opacity: 0.8;}
+	100%{opacity: 0.9;}	
+}
+
+@-webkit-keyframes playerButtonAnimation {
+	0%{opacity: 0.6;}
+	10%{opacity: 0.4;}
+	20%{opacity: 0.2;}	
+	30%{opacity: 0.0;}
+	40%{opacity: 0.2;}
+	50%{opacity: 0.3;}
+	60%{opacity: 0.5;}
+	70%{opacity: 0.6;}
+	80%{opacity: 0.7;}
+	90%{opacity: 0.8;}
+	100%{opacity: 0.9;}	
+}
+
+.buttonAnimation{
+	animation-name: buttonAnimation;
+	-webkit-animation-name: buttonAnimation;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes buttonAnimation {
+	0% 	{background:rgba(0,0,0,0.0);}
+	10% {background:rgba(0,0,0,0.1);}
+	20% {background:rgba(0,0,0,0.2);}
+	30% {background:rgba(0,0,0,0.3);}
+	40% {background:rgba(0,0,0,0.4);}
+	50% {background:rgba(0,0,0,0.5);}
+	60% {background:rgba(0,0,0,0.4);}
+	70%	{background:rgba(0,0,0,0.3);}
+	80% {background:rgba(0,0,0,0.2);}
+	90%	{background:rgba(0,0,0,0.1);}
+	100%{background:rgba(0,0,0,0.0);}
+}
+
+@-webkit-keyframes buttonAnimation {
+	0% 	{background:rgba(0,0,0,0.0);}
+	10% {background:rgba(0,0,0,0.1);}
+	20% {background:rgba(0,0,0,0.2);}
+	30% {background:rgba(0,0,0,0.3);}
+	40% {background:rgba(0,0,0,0.4);}
+	50% {background:rgba(0,0,0,0.5);}
+	60% {background:rgba(0,0,0,0.4);}
+	70%	{background:rgba(0,0,0,0.3);}
+	80% {background:rgba(0,0,0,0.2);}
+	90%	{background:rgba(0,0,0,0.1);}
+	100%{background:rgba(0,0,0,0.0);}
+}
+
+
+.playerTabAnimation{
+	animation-name: playerTabAnimation;
+	-webkit-animation-name: playerTabAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerTabAnimation {
+	0%{opacity: 0.9;}
+	10%{opacity: 0.7;}
+	20%{opacity: 0.5;}	
+	30%{opacity: 0.3;}
+	40%{opacity: 0.1;}
+	50%{opacity: 0.0;}
+	60%{opacity: 0.1;}
+	70%{opacity: 0.3;}
+	80%{opacity: 0.5;}
+	90%{opacity: 0.7;}
+	100%{opacity: 0.9;}	
+}
+
+@-webkit-keyframes playerTabAnimation {
+	0%{opacity: 0.9;}
+	10%{opacity: 0.7;}
+	20%{opacity: 0.5;}	
+	30%{opacity: 0.3;}
+	40%{opacity: 0.1;}
+	50%{opacity: 0.0;}
+	60%{opacity: 0.1;}
+	70%{opacity: 0.3;}
+	80%{opacity: 0.5;}
+	90%{opacity: 0.7;}
+	100%{opacity: 0.9;}	
 }

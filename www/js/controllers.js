@@ -8,14 +8,20 @@ angular.module('starter.controllers', [])
 	window.onload = start();
 	$scope.reportEvent = function(event)  {
 		console.log('Reporting : ' + event.type);
+		playerTabAnimation(this);
 		remove(this);
-		console.log('hidden');
 	}
 })
 
 .controller('TimerCtrl', function($scope) {})
 
-.controller('DiceCtrl', function($scope) {})
+.controller('DiceCtrl', function($scope) {
+	$scope.rollDice = function(event)  {
+		console.log('Reporting : ' + event.type);
+		rollAll();
+		console.log('rolled');
+	}
+})
 
 .directive('detectGestures', function($ionicGesture) {
   return {
@@ -23,12 +29,12 @@ angular.module('starter.controllers', [])
     link : function(scope, elem, attrs) {
       var gestureType = attrs.gestureType;
       switch(gestureType) {
-        case 'swipe':
-          $ionicGesture.on('swipe', scope.reportEvent, elem);
-          break;
 		case 'swipePlayer':
           $ionicGesture.on('swipeleft swiperight', scope.reportEvent, elem);
           break;
+		case 'gestureDice':
+		  $ionicGesture.on('swipe', scope.rollDice, elem);
+		  break;
       }
     }
   }
