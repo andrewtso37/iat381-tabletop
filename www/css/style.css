@@ -11,28 +11,100 @@ input, button{
 #tokenButton{
 }
 
-#p1{
-	background-color: #92BAFF; 
+#playerDisplay{
+    position: fixed;
+	height: 30px;
+	margin-top: 50px;
+	padding-right: 5%;
+	width: 100%;
 }
 
-#p2{
+#space{
+    height: 50px;
+}
+
+#player1{
+	background: linear-gradient(#FFFFFF, #92BAFF); 
+}
+
+.playerButton1{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #92BAFF;
+	border-style: none;
+}
+
+#player2{
+	background: linear-gradient(#FFFFFF, #A5E9E5);
+}
+
+.playerButton2{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
 	background-color: #A5E9E5;
+	border-style: none;
 }
 
-#p3{
-	background-color: #7FE889; 
+#player3{
+	background: linear-gradient(#FFFFFF, #7FE889);
 }
 
-#p4{
-	background-color: #F3F8A3; 
+.playerButton3{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #7FE889;
+	border-style: none;
 }
 
-#p5{
-	background-color: #FFA786; 
+#player4{
+	background: linear-gradient(#FFFFFF, #F3F8A3);
 }
 
-#p6{
-	background-color: #E1A1E2; 
+.playerButton4{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #F3F8A3;
+	border-style: none;
+}
+
+#player5{
+	background: linear-gradient(#FFFFFF, #FFA786);
+}
+
+.playerButton5{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #FFA786;
+	border-style: none;
+}
+
+#player6{
+	background: linear-gradient(#FFFFFF, #E1A1E2);
+}
+
+.playerButton6{
+	width: 30px !important;
+	height: 30px !important;
+	font: 10px Arial, sans-serif !important;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #E1A1E2;
+	border-style: none;
 }
 
 .grid{
@@ -47,7 +119,7 @@ input, button{
 	font: 30px Arial, sans-serif !important;
 	text-align: center;
 	color: #FFFFFF !important;
-	background-color: #000000;
+	background-color: #000000 !important;
 	border-color: transparent;
 }
 
@@ -57,9 +129,11 @@ input, button{
 	margin-right: 15px;
 	font: 25px Arial, sans-serif !important;
 	text-align: center;
-	color: #FFFFFF !important;
-	background-color: #FFA62F;
+	color: #000000 !important;
+	background-color: #F1E130 !important;
+	border-width: 5px;
 	border-radius: 25px;
+	border-color: #FFA62F !important;
 }
 
 .button1{
@@ -97,9 +171,295 @@ input, button{
 	border-radius: 15px;
 }
 
-
 /* dice tab*/
-.dice-position{
-	text-align: center;
-	padding-top: 25px;
+.diceLeft{
+	height: 100px;
+	padding-left: 20%;
+	padding-bottom: 20px;
+}
+
+.diceRight{
+	height: 100px;
+	padding-right: 20%;
+	padding-bottom: 20px;
+	margin-left: auto !important;
+}
+
+#diceSettings{
+	padding-right: 5%;
+}
+
+/*animations*/
+.vertFlipAnimation{
+	animation-name: vertFlipAnimation;
+	-webkit-animation-name: vertFlipAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes vertFlipAnimation {
+	0% 	{transform: scaleY(0.9);}
+	10% {transform: scaleY(0.7);}
+	20% {transform: scaleY(0.5);}
+	30% {transform: scaleY(0.3);}
+	40% {transform: scaleY(0.1);}
+	50% {transform: scaleY(0.0);}
+	60% {transform: scaleY(0.1);}
+	70% {transform: scaleY(0.3);}
+	80% {transform: scaleY(0.5);}
+	90% {transform: scaleY(0.7);}
+	100% {transform: scaleY(0.9);}
+}
+
+@-webkit-keyframes vertFlipAnimation {
+	0% 	{transform: scaleY(0.9);}
+	10% {transform: scaleY(0.7);}
+	20% {transform: scaleY(0.5);}
+	30% {transform: scaleY(0.3);}
+	40% {transform: scaleY(0.1);}
+	50% {transform: scaleY(0.0);}
+	60% {transform: scaleY(0.1);}
+	70% {transform: scaleY(0.3);}
+	80% {transform: scaleY(0.5);}
+	90% {transform: scaleY(0.7);}
+	100% {transform: scaleY(0.9);}
+}
+
+.playerButtonAnimation{
+	animation-name: playerButtonAnimation;
+	-webkit-animation-name: playerButtonAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerButtonAnimation {
+	0%{opacity: 0.6;}
+	10%{opacity: 0.4;}
+	20%{opacity: 0.2;}	
+	30%{opacity: 0.0;}
+	40%{opacity: 0.2;}
+	50%{opacity: 0.3;}
+	60%{opacity: 0.5;}
+	70%{opacity: 0.6;}
+	80%{opacity: 0.7;}
+	90%{opacity: 0.8;}
+	100%{opacity: 0.9;}	
+}
+
+@-webkit-keyframes playerButtonAnimation {
+	0%{opacity: 0.6;}
+	10%{opacity: 0.4;}
+	20%{opacity: 0.2;}	
+	30%{opacity: 0.0;}
+	40%{opacity: 0.2;}
+	50%{opacity: 0.3;}
+	60%{opacity: 0.5;}
+	70%{opacity: 0.6;}
+	80%{opacity: 0.7;}
+	90%{opacity: 0.8;}
+	100%{opacity: 0.9;}	
+}
+
+.buttonAnimation{
+	animation-name: buttonAnimation;
+	-webkit-animation-name: buttonAnimation;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes buttonAnimation {
+	0% 	{background:rgba(0,0,0,0.0);}
+	10% {background:rgba(0,0,0,0.1);}
+	20% {background:rgba(0,0,0,0.2);}
+	30% {background:rgba(0,0,0,0.3);}
+	40% {background:rgba(0,0,0,0.4);}
+	50% {background:rgba(0,0,0,0.5);}
+	60% {background:rgba(0,0,0,0.4);}
+	70%	{background:rgba(0,0,0,0.3);}
+	80% {background:rgba(0,0,0,0.2);}
+	90%	{background:rgba(0,0,0,0.1);}
+	100%{background:rgba(0,0,0,0.0);}
+}
+
+@-webkit-keyframes buttonAnimation {
+	0% 	{background:rgba(0,0,0,0.0);}
+	10% {background:rgba(0,0,0,0.1);}
+	20% {background:rgba(0,0,0,0.2);}
+	30% {background:rgba(0,0,0,0.3);}
+	40% {background:rgba(0,0,0,0.4);}
+	50% {background:rgba(0,0,0,0.5);}
+	60% {background:rgba(0,0,0,0.4);}
+	70%	{background:rgba(0,0,0,0.3);}
+	80% {background:rgba(0,0,0,0.2);}
+	90%	{background:rgba(0,0,0,0.1);}
+	100%{background:rgba(0,0,0,0.0);}
+}
+
+
+.playerTabAnimationLeft{
+	animation-name: playerTabAnimationLeft;
+	-webkit-animation-name: playerTabAnimationLeft;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerTabAnimationLeft {
+	0%{transform: translateX(0%);}
+	10%{transform: translateX(-10%);}
+	20%{transform: translateX(-20%);}	
+	30%{transform: translateX(-30%);}
+	40%{transform: translateX(-40%);}
+	50%{transform: translateX(-50%);}
+	60%{transform: translateX(-60%);}
+	70%{transform: translateX(-70%);}
+	80%{transform: translateX(-80%);}
+	90%{transform: translateX(-90%);}
+	100%{transform: translateX(-100%);}	
+}
+
+@-webkit-keyframes playerTabAnimationLeft {
+	0%{-webkit-transform: translateX(0%);}
+	10%{-webkit-transform: translateX(-10%);}
+	20%{-webkit-transform: translateX(-20%);}	
+	30%{-webkit-transform: translateX(-30%);}
+	40%{-webkit-transform: translateX(-40%);}
+	50%{-webkit-transform: translateX(-50%);}
+	60%{-webkit-transform: translateX(-60%);}
+	70%{-webkit-transform: translateX(-70%);}
+	80%{-webkit-transform: translateX(-80%);}
+	90%{-webkit-transform: translateX(-90%);}
+	100%{-webkit-transform: translateX(-100%);}	
+}
+
+.playerTabAnimationRight{
+	animation-name: playerTabAnimationRight;
+	-webkit-animation-name: playerTabAnimationRight;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerTabAnimationRight {
+	0%{transform: translateX(0%);}
+	10%{transform: translateX(10%);}
+	20%{transform: translateX(20%);}	
+	30%{transform: translateX(30%);}
+	40%{transform: translateX(40%);}
+	50%{transform: translateX(50%);}
+	60%{transform: translateX(60%);}
+	70%{transform: translateX(70%);}
+	80%{transform: translateX(80%);}
+	90%{transform: translateX(90%);}
+	100%{transform: translateX(100%);}	
+}
+
+@-webkit-keyframes playerTabAnimationRight {
+	0%{-webkit-transform: translateX(0%);}
+	10%{-webkit-transform: translateX(10%);}
+	20%{-webkit-transform: translateX(20%);}	
+	30%{-webkit-transform: translateX(30%);}
+	40%{-webkit-transform: translateX(40%);}
+	50%{-webkit-transform: translateX(50%);}
+	60%{-webkit-transform: translateX(60%);}
+	70%{-webkit-transform: translateX(70%);}
+	80%{-webkit-transform: translateX(80%);}
+	90%{-webkit-transform: translateX(90%);}
+	100%{-webkit-transform: translateX(100%);}	
+}
+
+.playerTabRemoveAnimation{
+	animation-name: playerTabRemoveAnimation;
+	-webkit-animation-name: playerTabRemoveAnimation;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerTabRemoveAnimation {
+	0%{opacity: 1.0;}
+	10%{opacity: 0.9;}
+	20%{opacity: 0.8;}	
+	30%{opacity: 0.7;}
+	40%{opacity: 0.6;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.4;}
+	70%{opacity: 0.3;}
+	80%{opacity: 0.2;}
+	90%{opacity: 0.1;}
+	100%{opacity: 0.0;}	
+}
+
+@-webkit-keyframes playerTabRemoveAnimation {
+	0%{opacity: 1.0;}
+	10%{opacity: 0.9;}
+	20%{opacity: 0.8;}	
+	30%{opacity: 0.7;}
+	40%{opacity: 0.6;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.4;}
+	70%{opacity: 0.3;}
+	80%{opacity: 0.2;}
+	90%{opacity: 0.1;}
+	100%{opacity: 0.0;}	
+}
+
+.playerTabRevealAnimation{
+	animation-name: playerTabRevealAnimation;
+	-webkit-animation-name: playerTabRevealAnimation;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes playerTabRevealAnimation {
+	0%{opacity: 0.0;}
+	10%{opacity: 0.1;}
+	20%{opacity: 0.2;}	
+	30%{opacity: 0.3;}
+	40%{opacity: 0.4;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.6;}
+	70%{opacity: 0.7;}
+	80%{opacity: 0.8;}
+	90%{opacity: 0.9;}
+	100%{opacity: 1.0;}	
+}
+
+@-webkit-keyframes playerTabRevealAnimation {
+	0%{opacity: 0.0;}
+	10%{opacity: 0.1;}
+	20%{opacity: 0.2;}	
+	30%{opacity: 0.3;}
+	40%{opacity: 0.4;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.6;}
+	70%{opacity: 0.7;}
+	80%{opacity: 0.8;}
+	90%{opacity: 0.9;}
+	100%{opacity: 1.0;}	
 }

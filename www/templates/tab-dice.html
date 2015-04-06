@@ -1,20 +1,30 @@
 <ion-view view-title="Dice">
-  <ion-content>
-  <div class="row">
-  <div class="col col-33">
-  <p class="dice-position"><img src="img/roll1.svg" name="dice1"></p>
-  </div>
-  <div class="col col-33">
-  <p class="dice-position"><img src="img/roll1.svg" name="dice2"></p>
-  </div>
-  <div class="col col-33">
-  <p class="dice-position"><img src="img/roll1.svg" name="dice3"></p>
-  </div>
-  </div>
-  <div align=center>
-    <a class="button button-full button-positive" id='roll' onclick='rolldice1(); rolldice2(); rolldice3();'>
-      Roll Dice
-    </a>
+<ion-content detect-gestures gesture-type="gestureDice" has-bouncing="false" onload="startDice()">
+<div id="diceSettings" align="right">
+	<button type="button" class="button1" onclick="subDice()">-</button>
+	<button type="button" class="button1" onclick="addDice()">+</button>
 </div>
+ 
+ <!--dice row 1-->
+<div class="row row-center">
+	<img src="img/roll1.svg" id="dice1" class="diceLeft" style="display:block">
+	<img src="img/roll1.svg" id="dice2" class="diceRight" style="display:block">
+</div>
+ <!--dice row 2-->
+<div class="row row-center">
+	<img src="img/roll1.svg" id="dice3" class="diceLeft" style="display:none">
+	<img src="img/roll1.svg" id="dice4" class="diceRight" style="display:none">
+</div>
+ <!--dice row 3-->
+<div class="row row-center">
+	<img src="img/roll1.svg" id="dice5" class="diceLeft" style="display:none">
+	<img src="img/roll1.svg" id="dice6" class="diceRight" style="display:none">
+</div>
+
+<!--dice button-->
+<a class="button button-full button-positive" id='roll' onclick='rollAll()'>
+    Dice Roll
+</a>
+
   </ion-content>
 </ion-view>
