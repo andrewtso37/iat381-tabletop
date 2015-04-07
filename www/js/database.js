@@ -1,4 +1,4 @@
-var html5rocks = {};
+var database = {};
     window.indexedDB = window.indexedDB || window.webkitIndexedDB ||
                     window.mozIndexedDB;
 
@@ -7,54 +7,54 @@ var html5rocks = {};
       window.IDBKeyRange = window.IDBKeyRange;
     }
 
-    html5rocks.indexedDB = {};
-    html5rocks.indexedDB.db = null;
+    database.indexedDB = {};
+    database.indexedDB.db = null;
 
-    html5rocks.indexedDB.onerror = function(e) {
+    database.indexedDB.onerror = function(e) {
       console.log(e);
     };
 
-    html5rocks.indexedDB.open = function() {
+    database.indexedDB.open = function() {
       var version = 1;
-      var request = indexedDB.open("todos", version);
+      var request = indexedDB.open("notes", version);
 
       // We can only create Object stores in a versionchange transaction.
       request.onupgradeneeded = function(e) {
         var db = e.target.result;
 
         // A versionchange transaction is started automatically.
-        e.target.transaction.onerror = html5rocks.indexedDB.onerror;
+        e.target.transaction.onerror = database.indexedDB.onerror;
 
-        if(db.objectStoreNames.contains("todo")) {
-          db.deleteObjectStore("todo");
+        if(db.objectStoreNames.contains("note")) {
+          db.deleteObjectStore("note");
         }
 
-        var store = db.createObjectStore("todo",
+        var store = db.createObjectStore("note",
           {keyPath: "timeStamp"});
       };
 
       request.onsuccess = function(e) {
-        html5rocks.indexedDB.db = e.target.result;
-        html5rocks.indexedDB.getAllTodoItems();
+        database.indexedDB.db = e.target.result;
+        database.indexedDB.getAllNoteItems();
       };
 
-      request.onerror = html5rocks.indexedDB.onerror;
+      request.onerror = database.indexedDB.onerror;
     };
 
-    html5rocks.indexedDB.addTodo = function(todoText) {
-      var db = html5rocks.indexedDB.db;
-      var trans = db.transaction(["todo"], "readwrite");
-      var store = trans.objectStore("todo");
+    database.indexedDB.addNote = function(noteText) {
+      var db = database.indexedDB.db;
+      var trans = db.transaction(["note"], "readwrite");
+      var store = trans.objectStore("note");
 
       var data = {
-        "text": todoText,
+        "text": noteText,
         "timeStamp": new Date().getTime()
       };
 
       var request = store.put(data);
 
       request.onsuccess = function(e) {
-        html5rocks.indexedDB.getAllTodoItems();
+        database.indexedDB.getAllNoteItems();
       };
 
       request.onerror = function(e) {
@@ -62,15 +62,15 @@ var html5rocks = {};
       };
     };
 
-    html5rocks.indexedDB.deleteTodo = function(id) {
-      var db = html5rocks.indexedDB.db;
-      var trans = db.transaction(["todo"], "readwrite");
-      var store = trans.objectStore("todo");
+    database.indexedDB.deleteNote = function(id) {
+      var db = database.indexedDB.db;
+      var trans = db.transaction(["note"], "readwrite");
+      var store = trans.objectStore("note");
 
       var request = store.delete(id);
 
       request.onsuccess = function(e) {
-        html5rocks.indexedDB.getAllTodoItems();
+        database.indexedDB.getAllNoteItems();
       };
 
       request.onerror = function(e) {
@@ -78,13 +78,13 @@ var html5rocks = {};
       };
     };
 
-    html5rocks.indexedDB.getAllTodoItems = function() {
-      var todos = document.getElementById("todoItems");
-      todos.innerHTML = "";
+    database.indexedDB.getAllNoteItems = function() {
+      var notes = document.getElementById("noteItems");
+      notes.innerHTML = "";
 
-      var db = html5rocks.indexedDB.db;
-      var trans = db.transaction(["todo"], "readwrite");
-      var store = trans.objectStore("todo");
+      var db = database.indexedDB.db;
+      var trans = db.transaction(["note"], "readwrite");
+      var store = trans.objectStore("note");
 
       // Get everything in the store;
       var keyRange = IDBKeyRange.lowerBound(0);
@@ -95,38 +95,38 @@ var html5rocks = {};
         if(!!result == false)
           return;
 
-        renderTodo(result.value);
+        rendernote(result.value);
         result.continue();
       };
 
-      cursorRequest.onerror = html5rocks.indexedDB.onerror;
+      cursorRequest.onerror = database.indexedDB.onerror;
     };
 
-    function renderTodo(row) {
-      var todos = document.getElementById("todoItems");
+    function rendernote(row) {
+      var notes = document.getElementById("noteItems");
       var li = document.createElement("div");
       //var a = document.createElement("a");
       var t = document.createTextNode(row.text);
 
       li.addEventListener("click", function() {
-        html5rocks.indexedDB.deleteTodo(row.timeStamp);
+        database.indexedDB.deleteNote(row.timeStamp);
       }, false);
 
       li.href = "#";
       //a.textContent = " [Delete]";
       li.appendChild(t);
       //li.appendChild(a);
-      todos.appendChild(li);
+      notes.appendChild(li);
     }
 
-    function addTodo() {
-      var todo = document.getElementById("todo");
-      html5rocks.indexedDB.addTodo(todo.value);
-      todo.value = "";
+    function addNote() {
+      var note = document.getElementById("note");
+      database.indexedDB.addNote(note.value);
+      note.value = "";
     }
 
     function init() {
-      html5rocks.indexedDB.open();
+      database.indexedDB.open();
     }
 
     window.addEventListener("DOMContentLoaded", init, false);
