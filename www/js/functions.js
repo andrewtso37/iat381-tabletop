@@ -1,4 +1,4 @@
-//*tracker functions*
+/*tracker functions*/
 // initializing function
 function start() {
 	 document.getElementById('player1').style.display = "block";
@@ -377,3 +377,4 @@ function diceAnimation(){
 	setTimeout(function() {dice5.style.webkitAnimation = '';}, 100);
 	document.getElementById('dice6').style.webkitAnimation = 'none';
 	setTimeout(function() {dice6.style.webkitAnimation = '';}, 100);
+}

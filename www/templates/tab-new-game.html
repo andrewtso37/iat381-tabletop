@@ -1,41 +1,44 @@
 <ion-view view-title="New Game" >
-  <ion-content has-bouncing="false">
-    <div class="item">
-    Player Amount
-    <div class="range range-positive">
-  		<input type="range" name="players" min="1" max="6" ng-model="data.players" id='players'>
-    </div>
-    <p>Players : {{data.players}}</p>
-    </div>
-    
-    <div class="item">
-    Initial Life
-    <div class="range range-positive">
-  		<input type="range" name="life" min="1" max="100" ng-model="data.life" id='life'>
-    </div>
-    <p>Life : {{data.life}}</p>
-    </div>
-    
-    <div class="item">
-    Initial Token
-    <div class="range range-positive">
-  		<input type="range" name="token" min="0" max="50" ng-model="data.token" id='token'>
-    </div>
-    <p>Tokens : {{data.token}}</p>
-    </div>
-    
-    <div class="item">
-    Dice Amount
-    <div class="range range-positive">
-  		<input type="range" name="token" min="1" max="6" ng-model="data.dice" id='dice'>
-    </div>
-    <p>Dice : {{data.dice}}</p>
-    </div>
+<ion-content has-bouncing="false">
+<div class="list">
+  <div class="item">
+    <div class="input label">Name of Game<input type="text"></div>
+  </div>
 
-    <div>
-      <a class="button button-full button-positive" href='#/tab/tracker' onclick="startDice(); start()" id="gameStart">
-        Start Game
-      </a>
-    </div>
-  </ion-content>
+  <div class="item">
+  Player Amount
+  <div class="range range-positive">
+		<input type="range" name="players" min="1" max="6" ng-model="data.players" id='players'>
+  </div>
+  <p>Players : {{data.players}}</p>
+  </div>
+  <div class="item">
+  Initial Life
+  <div class="range range-positive">
+		<input type="range" name="life" min="1" max="100" ng-model="data.life" id='life'>
+  </div>
+  <p>Life : {{data.life}}</p>
+  </div>
+  <div class="item">
+  Initial Token
+  <div class="range range-positive">
+		<input type="range" name="token" min="0" max="50" ng-model="data.token" id='token'>
+  </div>
+  <p>Tokens : {{data.token}}</p>
+  </div>
+  <div class="item">
+  Dice Amount
+  <div class="range range-positive">
+		<input type="range" name="token" min="1" max="6" ng-model="data.dice" id='dice'>
+  </div>
+  <p>Dice : {{data.dice}}</p>
+  </div>
+
+<div>
+    <a class="button button-full button-positive" href='#/tab/tracker' onclick="startDice(); start()" id="gameStart">
+      Start Game
+    </a>
+</div>
+
+</ion-content>
 </ion-view>

@@ -9,20 +9,22 @@ input, button{
 }
 
 #tokenButton{
-	margin-right: -10px;
 }
 
 #playerDisplay{
     position: fixed;
-	height: 50px;
-	margin-top: 25px;
-	margin-left: -5px;
+	height: 30px;
+	margin-top: 50px;
+	padding-right: 5%;
 	width: 100%;
 }
 
+#space{
+    height: 50px;
+}
+
 #player1{
-	background: linear-gradient(#FFFFFF, #92BAFF);
-	padding-top: 40px;
+	background: linear-gradient(#FFFFFF, #92BAFF); 
 }
 
 .playerButton1{
@@ -37,7 +39,6 @@ input, button{
 
 #player2{
 	background: linear-gradient(#FFFFFF, #A5E9E5);
-	padding-top: 40px;
 }
 
 .playerButton2{
@@ -52,7 +53,6 @@ input, button{
 
 #player3{
 	background: linear-gradient(#FFFFFF, #7FE889);
-	padding-top: 40px;
 }
 
 .playerButton3{
@@ -67,7 +67,6 @@ input, button{
 
 #player4{
 	background: linear-gradient(#FFFFFF, #F3F8A3);
-	padding-top: 40px;
 }
 
 .playerButton4{
@@ -82,7 +81,6 @@ input, button{
 
 #player5{
 	background: linear-gradient(#FFFFFF, #FFA786);
-	padding-top: 40px;
 }
 
 .playerButton5{
@@ -97,7 +95,6 @@ input, button{
 
 #player6{
 	background: linear-gradient(#FFFFFF, #E1A1E2);
-	padding-top: 40px;
 }
 
 .playerButton6{
@@ -284,16 +281,7 @@ input, button{
 }
 
 #diceSettings{
-	padding-right: 45px;
-}
-
-#diceTop{
-	padding-top: 50px;
-}
-
-/*favourites tab*/
-.noteArea{
-	margin-top: -15px;
+	padding-right: 5%;
 }
 
 /*animations*/
