@@ -9,20 +9,22 @@ input, button{
 }
 
 #tokenButton{
-	margin-right: -10px;
 }
 
 #playerDisplay{
     position: fixed;
-	height: 50px;
-	margin-top: 25px;
-	margin-left: -5px;
+	height: 30px;
+	margin-top: 50px;
+	padding-right: 5%;
 	width: 100%;
 }
 
+#space{
+    height: 50px;
+}
+
 #player1{
-	background: linear-gradient(#FFFFFF, #92BAFF);
-	padding-top: 40px;
+	background: linear-gradient(#FFFFFF, #92BAFF); 
 }
 
 .playerButton1{
@@ -37,7 +39,6 @@ input, button{
 
 #player2{
 	background: linear-gradient(#FFFFFF, #A5E9E5);
-	padding-top: 40px;
 }
 
 .playerButton2{
@@ -52,7 +53,6 @@ input, button{
 
 #player3{
 	background: linear-gradient(#FFFFFF, #7FE889);
-	padding-top: 40px;
 }
 
 .playerButton3{
@@ -67,7 +67,6 @@ input, button{
 
 #player4{
 	background: linear-gradient(#FFFFFF, #F3F8A3);
-	padding-top: 40px;
 }
 
 .playerButton4{
@@ -82,7 +81,6 @@ input, button{
 
 #player5{
 	background: linear-gradient(#FFFFFF, #FFA786);
-	padding-top: 40px;
 }
 
 .playerButton5{
@@ -97,7 +95,6 @@ input, button{
 
 #player6{
 	background: linear-gradient(#FFFFFF, #E1A1E2);
-	padding-top: 40px;
 }
 
 .playerButton6{
@@ -133,45 +130,140 @@ input, button{
 	font: 25px Arial, sans-serif !important;
 	text-align: center;
 	color: #000000 !important;
-	background-color: #F1E130 !important;
-	border-width: 5px;
+	background-color: #FFCE38 !important;
+	border-width: 3px !important;
 	border-radius: 25px;
-	border-color: #FFA62F !important;
+	border: solid #FFA62F !important;
 }
 
-.button1{
+.button1a{
 	width: 35px;
 	height: 40px;
-	font: 20px Arial, sans-serif;
-	color: #000000;
+	font: 30px Arial, sans-serif;
+	color: #6F6F6F;
+	background: #D0CBCB;
+	border-radius: 25px 0 0 25px;
+	border-right: 0px !important;
+	border: solid #A1A1A1;
 }
 
-.button2{
+.button1b{
+	width: 35px;
+	height: 40px;
+	font: 30px Arial, sans-serif;
+	color: #6F6F6F;
+	background: #D0CBCB;
+	border-radius: 0 25px 25px 0;
+	border-left: 0px !important;
+	border: solid #A1A1A1;
+}
+
+.button2a{
 	width: 25px;
 	height: 25px;
 	font: 18px Arial, sans-serif;
-	color: #000000;
-	border-radius: 25px;
+	color: #6F6F6F;
+	background: #D0CBCB;
+	border-radius: 25px 25px 0 0;
+	border: solid #A1A1A1;
 }
 
-.button3{
+.button2b{
+	width: 25px;
+	height: 25px;
+	font: 18px Arial, sans-serif;
+	color: #6F6F6F;
+	background: #D0CBCB;
+	border-radius: 0 0 25px 25px;
+	border: solid #A1A1A1;
+}
+
+.button3a{
 	width: 30px;
 	height: 30px;
 	font: 10px Arial, sans-serif;
-	font-weight: 900;
-	color: #000000;
+	font-weight: 50;
+	color: #6F6F6F;
 	border-width: 0px;
-	border-radius: 15px;
+	border-radius: 15px 0 0 15px;
+	border: solid #A1A1A1;
 }
 
-.button4{
+.button3b{
 	width: 30px;
 	height: 30px;
 	font: 10px Arial, sans-serif;
-	font-weight: 900;
-	background-color: #F3FF00;
+	font-weight: 500;
+	color: #6F6F6F;
+	border-width: 0px 3px 0px 3px;
+	border: solid #A1A1A1;
+}
+
+.button3c{
+	width: 30px;
+	height: 30px;
+	font: 10px Arial, sans-serif;
+	font-weight: 500;
+	color: #6F6F6F;
 	border-width: 0px;
-	border-radius: 15px;
+	border-radius: 0 15px 15px 0;
+	border: solid #A1A1A1;
+}
+
+.button4a{
+	width: 30px;
+	height: 30px;
+	font: 10px Arial, sans-serif;
+	font-weight: 500;
+	background: #E6BE46;
+	color: #AB8C2F;
+	border-width: 0px;
+	border-radius: 15px 0 0 15px;
+	border: solid #B9921C;
+}
+
+.button4b{
+	width: 30px;
+	height: 30px;
+	font: 10px Arial, sans-serif;
+	font-weight: 500;
+	color: #AB8C2F;
+	background: #E6BE46;
+	border-width: 0px 3px 0px 3px;
+	border: solid #B9921C;
+}
+
+.button4c{
+	width: 30px;
+	height: 30px;
+	font: 10px Arial, sans-serif;
+	font-weight: 500;
+	color: #AB8C2F;
+	background: #E6BE46;
+	border-width: 0px;
+	border-radius: 0 15px 15px 0;
+	border: solid #B9921C;
+}
+
+.button5a{
+	width: 35px;
+	height: 40px;
+	font: 30px Arial, sans-serif;
+	color: #6F6F6F;
+	background: #D0CBCB;
+	border-radius: 25px 0 0 25px;
+	border: solid #A1A1A1;
+}
+
+.button5b{
+	width: 35px;
+	height: 40px;
+	font: 30px Arial, sans-serif;
+	color: #6F6F6F;
+	background: #D0CBCB;
+	border-radius: 0 25px 25px 0;
+	border: solid #A1A1A1;
+	float: right;
 }
 
 /* dice tab*/
@@ -189,16 +281,7 @@ input, button{
 }
 
 #diceSettings{
-	padding-right: 45px;
-}
-
-#diceTop{
-	padding-top: 50px;
-}
-
-/*favourites tab*/
-.noteArea{
-	margin-top: -15px;
+	padding-right: 5%;
 }
 
 /*animations*/

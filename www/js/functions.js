@@ -1,4 +1,4 @@
-//*tracker functions*
+/*tracker functions*/
 // initializing function
 function start() {
 	 document.getElementById('player1').style.display = "block";
