@@ -389,7 +389,7 @@ input, button{
 }
 
 @-webkit-keyframes buttonAnimation {
-	0% 	{background:linear-gradient(rgba(0,0,0,0.0);}
+	0% 	{background:rgba(0,0,0,0.0);}
 	10% {background:rgba(0,0,0,0.1);}
 	20% {background:rgba(0,0,0,0.2);}
 	30% {background:rgba(0,0,0,0.3);}
