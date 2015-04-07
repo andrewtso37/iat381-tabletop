@@ -53,12 +53,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.favourites', {
-    url: '/favourites',
+  .state('tab.notes', {
+    url: '/notes',
     views: {
-      'tab-favourites': {
-        templateUrl: 'templates/tab-favourites.html',
-        controller: 'FavouritesCtrl'
+      'tab-notes': {
+        templateUrl: 'templates/tab-notes.html',
+        controller: 'NotesCtrl'
       }
     }
   })
@@ -84,5 +84,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/favourites');
+  $urlRouterProvider.otherwise('/tab/notes');
 });

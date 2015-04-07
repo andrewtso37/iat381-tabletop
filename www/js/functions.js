@@ -378,15 +378,3 @@ function diceAnimation(){
 	document.getElementById('dice6').style.webkitAnimation = 'none';
 	setTimeout(function() {dice6.style.webkitAnimation = '';}, 100);
 }
-
-/*shake gesture*/
-var shakeDice = new Shake({
-    threshold: 20, 
-    timeout: 1000 
-});
-
-//function to call when shake occurs
-function shakeEventDidOccur () {
-	rollAll();
-	console.log('rolled');
-}
