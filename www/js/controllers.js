@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('NewGameCtrl', function($scope) {
-	$scope.data = { 'players': '1', 'life' : '20', 'token': '0', 'dice': '2' };
+	$scope.data = { 'players': '2', 'life' : '20', 'token': '5', 'dice': '2' };
 })
 
 .controller('TrackerCtrl', function($scope) {  
@@ -14,12 +14,14 @@ angular.module('starter.controllers', [])
 	}
 })
 
-.controller('FavouritesCtrl', function($scope) {})
+.controller('NotesCtrl', function($scope) {})
 
 .controller('DiceCtrl', function($scope) {
 	window.onload = startDice();
-	window.onload = shakeDice.start();
-	window.addEventListener('shake', shakeEventDidOccur, false);
+	$scope.rollDice = function(event)  {
+		console.log('Reporting : ' + event.type);
+		if (event.type == 'swipeup') {diceAnimation(this);}
+	}
 })
 
 .directive('detectGestures', function($ionicGesture) {
@@ -32,7 +34,7 @@ angular.module('starter.controllers', [])
           $ionicGesture.on('swipeleft swiperight', scope.removeTab, elem);
           break;
 		case 'gestureDice':
-		  $ionicGesture.on('shake', scope.rollDice, elem);
+		  $ionicGesture.on('swipeup', scope.rollDice, elem);
 		  break;
       }
     }
