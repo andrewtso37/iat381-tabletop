@@ -294,31 +294,37 @@ function playerButtonAnimation(player){
 		$('#p1button').addClass('playerButtonAnimation');
 		var button = document.getElementById('p1button');
 		document.getElementById('p1button').style.webkitAnimation = 'none';
+		setTimeout(function() {$('#p1button').removeClass('playerButtonAnimation');}, 1000);
 	}
 	if (player == 'player2') {
 		$('#p2button').addClass('playerButtonAnimation');
 		var button = document.getElementById('p2button');
 		document.getElementById('p2button').style.webkitAnimation = 'none';
+		setTimeout(function() {$('#p2button').removeClass('playerButtonAnimation');}, 1000);
 		}
 	if (player == 'player3') {
 		$('#p3button').addClass('playerButtonAnimation');
 		var button = document.getElementById('p3button');
 		document.getElementById('p3button').style.webkitAnimation = 'none';
+		setTimeout(function() {$('#p3button').removeClass('playerButtonAnimation');}, 1000);
 	}
 	if (player == 'player4') {
 		$('#p4button').addClass('playerButtonAnimation');
 		var button = document.getElementById('p4button');
 		document.getElementById('p4button').style.webkitAnimation = 'none';
+		setTimeout(function() {$('#p4button').removeClass('playerButtonAnimation');}, 1000);
 	}
 	if (player == 'player5') {
 		$('#p5button').addClass('playerButtonAnimation');
 		var button = document.getElementById('p5button');
 		document.getElementById('p5button').style.webkitAnimation = 'none';	
+		setTimeout(function() {$('#p5button').removeClass('playerButtonAnimation');}, 1000);
 	}
 	if (player == 'player6') {
 		$('#p6button').addClass('playerButtonAnimation');
 		var button = document.getElementById('p6button');
-		document.getElementById('p6button').style.webkitAnimation = 'none';	
+		document.getElementById('p6button').style.webkitAnimation = 'none';
+		setTimeout(function() {$('#p6button').removeClass('playerButtonAnimation');}, 1000);
 	}
 	setTimeout(function() {button.style.webkitAnimation = '';}, 100);
 }
