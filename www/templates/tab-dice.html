@@ -1,8 +1,8 @@
 <ion-view view-title="Dice">
-<ion-content detect-gestures gesture-type="gestureDice" has-bouncing="false" onload="startDice()">
+<ion-content has-bouncing="false" detect-gestures gesture-type="gestureDice">
 <div id="diceSettings" align="right">
-	<button type="button" class="button1" onclick="subDice()">-</button>
-	<button type="button" class="button1" onclick="addDice()">+</button>
+	<button type="button" class="button5a" onclick="subDice(); buttonAnimation(this)">-</button>
+	<button type="button" class="button5b" onclick="addDice(); buttonAnimation(this)">+</button>
 </div>
  
  <!--dice row 1-->

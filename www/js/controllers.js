@@ -18,8 +18,11 @@ angular.module('starter.controllers', [])
 
 .controller('DiceCtrl', function($scope) {
 	window.onload = startDice();
-	window.onload = shakeDice.start();
-	window.addEventListener('shake', shakeEventDidOccur, false);
+	$scope.rollDice = function(event)  {
+		console.log('Reporting : ' + event.type);
+		rollAll();
+		console.log('rolled');
+	}
 })
 
 .directive('detectGestures', function($ionicGesture) {
@@ -32,12 +35,11 @@ angular.module('starter.controllers', [])
           $ionicGesture.on('swipeleft swiperight', scope.removeTab, elem);
           break;
 		case 'gestureDice':
-		  $ionicGesture.on('shake', scope.rollDice, elem);
+		  $ionicGesture.on('swipeup swipedown', scope.rollDice, elem);
 		  break;
       }
     }
   }
 })
-.controller('DiceCtrl', function($scope) {})
 
 .controller('AddCtrl', function($scope) {})
