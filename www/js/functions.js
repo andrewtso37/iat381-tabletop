@@ -78,10 +78,21 @@ function startDice() {
 
 // calculation functions
 function s(v, player) { document.getElementById(player).value = v }
-function a(v, player) { s(eval(document.getElementById(player).value += v), player) }
+function a(v, player) {
+	var p = document.getElementById(player);
+	displayAnimation(p);
+	setTimeout(function() {
+	s(eval(document.getElementById(player).value += v), player);}, 300);
+}
+	
 // token calculation functions
 function t(v, playerC) { document.getElementById(playerC).value = v }
-function aT(v, playerC) { t(eval(document.getElementById(playerC).value += v), playerC) }
+function aT(v, playerC) {
+	var p = document.getElementById(playerC);
+	counterAnimation(p);
+	setTimeout(function() {
+	t(eval(document.getElementById(playerC).value += v), playerC)}, 400);
+}
 
 // hides players not in use
 function hide() {
@@ -377,4 +388,20 @@ function diceAnimation(){
 	setTimeout(function() {dice5.style.webkitAnimation = '';}, 100);
 	document.getElementById('dice6').style.webkitAnimation = 'none';
 	setTimeout(function() {dice6.style.webkitAnimation = '';}, 100);
+}
+
+function displayAnimation(player){
+	$(player).addClass('displayAnimation');
+	var player = player;
+	player.style.webkitAnimation = 'none';
+	setTimeout(function() {player.style.webkitAnimation = '';}, 100);
+	setTimeout(function() {$(player).removeClass('displayAnimation')}, 800);
+}
+
+function counterAnimation(player){
+	$(player).addClass('counterAnimation');
+	var player = player;
+	player.style.webkitAnimation = 'none';
+	setTimeout(function() {player.style.webkitAnimation = '';}, 100);
+	setTimeout(function() {$(player).removeClass('counterAnimation')}, 500);
 }

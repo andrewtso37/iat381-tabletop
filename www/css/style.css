@@ -1,11 +1,3 @@
-/*new game tab*/
-.buttonPosition{
-    position: absolute; 
-    top: 0px; 
-    right: 0px;
-    width: 100%;
-}
-
 /* tracker tab */
 input, button{
   -webkit-box-sizing: border-box;
@@ -26,6 +18,10 @@ input, button{
 	margin-top: 25px;
 	margin-left: -5px;
 	width: 100%;
+}
+
+#space{
+    height: 50px;
 }
 
 #player1{
@@ -147,134 +143,76 @@ input, button{
 	border: solid #FFA62F !important;
 }
 
-.button1a{
+#button1a{
 	width: 35px;
 	height: 40px;
 	font: 30px Arial, sans-serif;
-	color: #6F6F6F;
-	background: #D0CBCB;
 	border-radius: 25px 0 0 25px;
 	border-right: 0px !important;
-	border: solid #A1A1A1;
 }
 
-.button1b{
+#button1b{
 	width: 35px;
 	height: 40px;
 	font: 30px Arial, sans-serif;
-	color: #6F6F6F;
-	background: #D0CBCB;
 	border-radius: 0 25px 25px 0;
 	border-left: 0px !important;
-	border: solid #A1A1A1;
 }
 
-.button2a{
+#button2a{
 	width: 25px;
 	height: 25px;
 	font: 18px Arial, sans-serif;
-	color: #6F6F6F;
-	background: #D0CBCB;
 	border-radius: 25px 25px 0 0;
-	border: solid #A1A1A1;
 }
 
-.button2b{
+#button2b{
 	width: 25px;
 	height: 25px;
 	font: 18px Arial, sans-serif;
-	color: #6F6F6F;
-	background: #D0CBCB;
 	border-radius: 0 0 25px 25px;
-	border: solid #A1A1A1;
 }
 
-.button3a{
+#button4a{
 	width: 30px;
 	height: 30px;
 	font: 10px Arial, sans-serif;
-	font-weight: 50;
-	color: #6F6F6F;
-	border-width: 0px;
+	color: #000000;
+	border-width: 3px;
 	border-radius: 15px 0 0 15px;
-	border: solid #A1A1A1;
 }
 
-.button3b{
+#button4b{
 	width: 30px;
 	height: 30px;
 	font: 10px Arial, sans-serif;
-	font-weight: 500;
-	color: #6F6F6F;
-	border-width: 0px 3px 0px 3px;
-	border: solid #A1A1A1;
-}
-
-.button3c{
-	width: 30px;
-	height: 30px;
-	font: 10px Arial, sans-serif;
-	font-weight: 500;
-	color: #6F6F6F;
+	color: #000000;
 	border-width: 0px;
-	border-radius: 0 15px 15px 0;
-	border: solid #A1A1A1;
+	border-width: 3px 3px 3px 3px;
 }
 
-.button4a{
+#button4c{
 	width: 30px;
 	height: 30px;
 	font: 10px Arial, sans-serif;
-	font-weight: 500;
-	background: #E6BE46;
-	color: #AB8C2F;
-	border-width: 0px;
-	border-radius: 15px 0 0 15px;
-	border: solid #B9921C;
+	color: #000000;
+	border-width: 3px;
+	border-radius: 0 30px 30px 0;
 }
 
-.button4b{
-	width: 30px;
-	height: 30px;
-	font: 10px Arial, sans-serif;
-	font-weight: 500;
-	color: #AB8C2F;
-	background: #E6BE46;
-	border-width: 0px 3px 0px 3px;
-	border: solid #B9921C;
-}
-
-.button4c{
-	width: 30px;
-	height: 30px;
-	font: 10px Arial, sans-serif;
-	font-weight: 500;
-	color: #AB8C2F;
-	background: #E6BE46;
-	border-width: 0px;
-	border-radius: 0 15px 15px 0;
-	border: solid #B9921C;
-}
-
-.button5a{
-	width: 35px;
+#button5a{
+	width: 40px;
 	height: 40px;
-	font: 30px Arial, sans-serif;
-	color: #6F6F6F;
-	background: #D0CBCB;
+	font: 20px Arial;
 	border-radius: 25px 0 0 25px;
-	border: solid #A1A1A1;
 }
 
-.button5b{
-	width: 35px;
+#button5b{
+	width: 40px;
 	height: 40px;
-	font: 30px Arial, sans-serif;
-	color: #6F6F6F;
-	background: #D0CBCB;
 	border-radius: 0 25px 25px 0;
-	border: solid #A1A1A1;
-	float: right;
+	font: 20px Arial;
+	margin-right: 5% !important;
 }
 
 /* dice tab*/
@@ -577,4 +515,82 @@ input, button{
 	80%{opacity: 0.8;}
 	90%{opacity: 0.9;}
 	100%{opacity: 1.0;}	
+}
+
+.displayAnimation{
+	animation-name: displayAnimation;
+	-webkit-animation-name: displayAnimation;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes displayAnimation {
+	0%{color: #0F0F0F;}
+	10%{color: #282828;}
+	20%{color: #414141;}
+	30%{color: #5A5A5A;}
+	40%{color: #737373;}
+	50%{color: #8C8C8C;}
+	60%{color: #A5A5A5;}
+	70%{color: #BEBEBE;}
+	80%{color: #D7D7D7;}	
+	90%{color: #E6E6E6;}
+	100%{color: #000000;}
+}
+
+@-webkit-keyframes displayAnimation {
+	0%{color: #0F0F0F;}
+	10%{color: #282828;}
+	20%{color: #414141;}
+	30%{color: #5A5A5A;}
+	40%{color: #737373;}
+	50%{color: #8C8C8C;}
+	60%{color: #A5A5A5;}
+	70%{color: #BEBEBE;}
+	80%{color: #D7D7D7;}	
+	90%{color: #E6E6E6;}
+	100%{color: #000000;}
+}
+
+.counterAnimation{
+	animation-name: counterAnimation;
+	-webkit-animation-name: counterAnimation;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes counterAnimation {
+	0% 	{transform: scaleX(0.9);}
+	10% {transform: scaleX(0.7);}
+	20% {transform: scaleX(0.5);}
+	30% {transform: scaleX(0.3);}
+	40% {transform: scaleX(0.1);}
+	50% {transform: scaleX(0.0);}
+	60% {transform: scaleX(0.1);}
+	70% {transform: scaleX(0.3);}
+	80% {transform: scaleX(0.5);}
+	90% {transform: scaleX(0.7);}
+	100% {transform: scaleX(0.9);}
+}
+
+@-webkit-keyframes counterAnimation {
+	0% 	{transform: scaleX(0.9);}
+	10% {transform: scaleX(0.7);}
+	20% {transform: scaleX(0.5);}
+	30% {transform: scaleX(0.3);}
+	40% {transform: scaleX(0.1);}
+	50% {transform: scaleX(0.0);}
+	60% {transform: scaleX(0.1);}
+	70% {transform: scaleX(0.3);}
+	80% {transform: scaleX(0.5);}
+	90% {transform: scaleX(0.7);}
+	100% {transform: scaleX(0.9);}
 }
