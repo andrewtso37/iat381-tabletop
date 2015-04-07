@@ -20,12 +20,8 @@ angular.module('starter.controllers', [])
 	window.onload = startDice();
 	$scope.rollDice = function(event)  {
 		console.log('Reporting : ' + event.type);
-<<<<<<< HEAD
 		rollAll();
 		console.log('rolled');
-=======
-		if (event.type == 'swipeup') {diceAnimation(this);}
->>>>>>> 6bdccd5afa225d31d57307227891f061ae820bd1
 	}
 })
 
@@ -39,11 +35,7 @@ angular.module('starter.controllers', [])
           $ionicGesture.on('swipeleft swiperight', scope.removeTab, elem);
           break;
 		case 'gestureDice':
-<<<<<<< HEAD
 		  $ionicGesture.on('swipeup swipedown', scope.rollDice, elem);
-=======
-		  $ionicGesture.on('swipeup', scope.rollDice, elem);
->>>>>>> 6bdccd5afa225d31d57307227891f061ae820bd1
 		  break;
       }
     }

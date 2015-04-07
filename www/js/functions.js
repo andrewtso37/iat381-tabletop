@@ -377,8 +377,3 @@ function diceAnimation(){
 	setTimeout(function() {dice5.style.webkitAnimation = '';}, 100);
 	document.getElementById('dice6').style.webkitAnimation = 'none';
 	setTimeout(function() {dice6.style.webkitAnimation = '';}, 100);
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 6bdccd5afa225d31d57307227891f061ae820bd1
