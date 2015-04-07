@@ -1,31 +1,24 @@
 <ion-view view-title="Dice">
-<ion-content has-bouncing="false" onload="startDice()" detect-gestures gesture-type="gestureDice">
-<div class="item-button-right">
-	<button class="button button-positive" onclick="addDice()" id="diceSettings">+</button>
-	<button class="button button-assertive" onclick="subDice()">-</button>
+  <ion-content has-bouncing="false" onload="startDice()" detect-gestures gesture-type="gestureDice" onclick='rollAll()'>
+	<div class="item-button-right">
+		<button class="button button-positive" onclick="addDice()" id="diceSettings">+</button>
+		<button class="button button-assertive" onclick="subDice()">-</button>
+	</div>
 
-</div>
-
-<!--dice row 1-->
-<div class="row row-center" id="diceTop">
-	<img src="img/roll1.svg" id="dice1" class="diceLeft" style="display:block">
-	<img src="img/roll1.svg" id="dice2" class="diceRight" style="display:block">
-</div>
- <!--dice row 2-->
-<div class="row row-center">
-	<img src="img/roll1.svg" id="dice3" class="diceLeft" style="display:none">
-	<img src="img/roll1.svg" id="dice4" class="diceRight" style="display:none">
-</div>
- <!--dice row 3-->
-<div class="row row-center">
-	<img src="img/roll1.svg" id="dice5" class="diceLeft" style="display:none">
-	<img src="img/roll1.svg" id="dice6" class="diceRight" style="display:none">
-</div>
-
-<!--dice button-->
-<a class="button button-full button-positive" id='roll' onclick='rollAll()'>
-    Dice Roll
-</a>
-
+	<!--dice row 1-->
+	<div class="row row-center" id="diceTop">
+		<img src="img/roll1.svg" id="dice1" class="diceLeft" style="display:block">
+		<img src="img/roll1.svg" id="dice2" class="diceRight" style="display:block">
+	</div>
+	 <!--dice row 2-->
+	<div class="row row-center">
+		<img src="img/roll1.svg" id="dice3" class="diceLeft" style="display:none">
+		<img src="img/roll1.svg" id="dice4" class="diceRight" style="display:none">
+	</div>
+	 <!--dice row 3-->
+	<div class="row row-center">
+		<img src="img/roll1.svg" id="dice5" class="diceLeft" style="display:none">
+		<img src="img/roll1.svg" id="dice6" class="diceRight" style="display:none">
+	</div>
   </ion-content>
 </ion-view>

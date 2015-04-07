@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('NewGameCtrl', function($scope) {
-	$scope.data = { 'players': '2', 'life' : '20', 'token': '0', 'dice': '2' };
+	$scope.data = { 'players': '2', 'life' : '20', 'token': '5', 'dice': '2' };
 })
 
 .controller('TrackerCtrl', function($scope) {  

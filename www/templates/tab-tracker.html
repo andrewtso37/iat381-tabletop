@@ -1,7 +1,7 @@
 <ion-view view-title="Tracker">
 <ion-header-bar>
 <!-- Player Display Buttons -->
-<div id="playerDisplay" align="right">
+<div class="item" id="playerDisplay" align="right">
 <button class="playerButton1" onclick="displayChange('player1')" id="p1button">P1</button>
 <button class="playerButton2" onclick="displayChange('player2')" id="p2button">P2</button>
 <button class="playerButton3" onclick="displayChange('player3')" id="p3button">P3</button>
@@ -12,20 +12,16 @@
 </ion-header-bar>
 <ion-content has-bouncing="false">
 
-<!-- Blank space -->
-<div id="space">
-</div>
-
 <!-- Player tabs -->
 <!--p1-->
 <div class="item item-divider" style="display:none" id="player1" detect-gestures gesture-type="swipePlayer">
 Player 1 
 <div class="row row-center">
 <button type="button" class="button1a" onclick="a('-1','1'); buttonAnimation(this)">-</button >
-<input type="text" id="1" class="input-display" value="0" readonly>
+<input type="text" id="1" class="input-display" value="0" disabled>
 <button type="button" class="button1b" onclick="a('+1', '1'); buttonAnimation(this)">+</button>
 <div class="col" align=right>
-<input type="text" id="1c" class="counter-display" value="0" readonly>
+<input type="text" id="1c" class="counter-display" value="0" disabled>
 </div>
 <div>
 <button type="button" class="button2a" onclick="aT('+1','1c'); buttonAnimation(this)">+</button><br>
@@ -53,10 +49,10 @@ Player 1
 Player 2
 <div class="row row-center">
 <button type="button" class="button1a" onclick="a('-1','2'); buttonAnimation(this)">-</button>
-<input type="text" id="2" class="input-display" value="0" readonly>
+<input type="text" id="2" class="input-display" value="0" disabled>
 <button type="button" class="button1b" onclick="a('+1', '2'); buttonAnimation(this)">+</button>
 <div class="col" align=right>
-<input type="text" id="2c" class="counter-display" value="0" readonly>
+<input type="text" id="2c" class="counter-display" value="0" disabled>
 </div>
 <div>
 <button type="button" class="button2a" onclick="aT('+1','2c'); buttonAnimation(this)">+</button><br>
@@ -84,10 +80,10 @@ Player 2
 Player 3
 <div class="row row-center">
 <button type="button" class="button1a" onclick="a('-1','3'); buttonAnimation(this)">-</button>
-<input type="text" id="3" class="input-display" value="0" readonly>
+<input type="text" id="3" class="input-display" value="0" disabled>
 <button type="button" class="button1b" onclick="a('+1', '3'); buttonAnimation(this)">+</button>
 <div class="col" align=right>
-<input type="text" id="3c" class="counter-display" value="0" readonly>
+<input type="text" id="3c" class="counter-display" value="0" disabled>
 </div>
 <div>
 <button type="button" class="button2a" onclick="aT('+1','3c'); buttonAnimation(this)">+</button><br>
@@ -115,10 +111,10 @@ Player 3
 Player 4
 <div class="row row-center">
 <button type="button" class="button1a" onclick="a('-1','4'); buttonAnimation(this)">-</button>
-<input type="text" id="4" class="input-display" value="0" readonly>
+<input type="text" id="4" class="input-display" value="0" disabled>
 <button type="button" class="button1b" onclick="a('+1', '4'); buttonAnimation(this)">+</button>
 <div class="col" align=right>
-<input type="text" id="4c" class="counter-display" value="0" readonly>
+<input type="text" id="4c" class="counter-display" value="0" disabled>
 </div>
 <div>
 <button type="button" class="button2a" onclick="aT('+1','4c'); buttonAnimation(this)">+</button><br>
@@ -146,10 +142,10 @@ Player 4
 Player 5
 <div class="row row-center">
 <button type="button" class="button1a" onclick="a('-1','5'); buttonAnimation(this)">-</button>
-<input type="text" id="5" class="input-display" value="0" readonly>
+<input type="text" id="5" class="input-display" value="0" disabled>
 <button type="button" class="button1b" onclick="a('+1', '5'); buttonAnimation(this)">+</button>
 <div class="col" align=right>
-<input type="text" id="5c" class="counter-display" value="0" readonly>
+<input type="text" id="5c" class="counter-display" value="0" disabled>
 </div>
 <div>
 <button type="button" class="button2a" onclick="aT('+1','5c'); buttonAnimation(this)">+</button><br>
@@ -177,10 +173,10 @@ Player 5
 Player 6
 <div class="row row-center">
 <button type="button" class="button1a" onclick="a('-1','6'); buttonAnimation(this)">-</button>
-<input type="text" id="6" class="input-display" value="0" readonly>
+<input type="text" id="6" class="input-display" value="0" disabled>
 <button type="button" class="button1b" onclick="a('+1', '6'); buttonAnimation(this)">+</button>
 <div class="col" align=right>
-<input type="text" id="6c" class="counter-display" value="0" readonly>
+<input type="text" id="6c" class="counter-display" value="0" disabled>
 </div>
 <div>
 <button type="button" class="button2a" onclick="aT('+1','6c'); buttonAnimation(this)">+</button><br>
