@@ -116,7 +116,7 @@ var database = {};
       //a.textContent = " [Delete]";
       li.appendChild(t);
       //li.appendChild(a);
-      notes.appendChild(li);
+      notes.appendChild(li).className ="item";
     }
 
     function addNote() {
