@@ -105,7 +105,6 @@ var database = {};
     function rendernote(row) {
       var notes = document.getElementById("noteItems");
       var li = document.createElement("div");
-      //var a = document.createElement("a");
       var t = document.createTextNode(row.text);
 
       li.addEventListener("click", function() {
@@ -113,10 +112,9 @@ var database = {};
       }, false);
 
       li.href = "#";
-      //a.textContent = " [Delete]";
       li.appendChild(t);
-      //li.appendChild(a);
-      notes.appendChild(li);
+      notes.appendChild(li).className ="item";
+
     }
 
     function addNote() {
