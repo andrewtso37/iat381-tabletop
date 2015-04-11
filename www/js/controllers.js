@@ -14,7 +14,9 @@ angular.module('starter.controllers', [])
 	}
 })
 
-.controller('NotesCtrl', function($scope) {})
+.controller('NotesCtrl', function($scope) {
+	window.onload = init();
+})
 
 .controller('DiceCtrl', function($scope) {
 	window.onload = startDice();
@@ -41,5 +43,3 @@ angular.module('starter.controllers', [])
     }
   }
 })
-
-.controller('AddCtrl', function($scope) {})
